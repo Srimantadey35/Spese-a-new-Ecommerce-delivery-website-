@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+     @apply bg-slate-200 text-neutral-700
+}
+
+.scrollbarNone::-webkit-scrollbar{
+     display: none;
+}

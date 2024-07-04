@@ -17,7 +17,7 @@ app.use(cors({
 
 app.get("/",(req,res)=>{
     res.json({
-        messege : "server running on port" + PORT,
+        messege : "server running on port" + process.env.PORT,
         success : true
     })
 })

@@ -1,11 +1,11 @@
 import express from "express"
 import cors from "cors"
-import cookieparser from "cookie-parser"
+import cookieParser from "cookie-parser"
 
 const app = express()
 
 app.use(express.json({limit : "10666kb"}))
-app.use(cookieparser())
+app.use(cookieParser())
 app.use(express.urlencoded({extended : true}))
 
 

@@ -22,8 +22,8 @@ function CardProduct({items}) {
 
   return (
    
-   <Link to={"/menu/"+items._id} onClick={()=>window.scrollTo({top:"0",behavior:'smooth'})} className='md:w-44 w-25 h-25 md:min-w-52 shadow-md p-2 grid gap-1  md:max-w-52 mr-1 ml-1 text-center'>
-      <div className='w-36 mx-auto '>
+   <Link to={"/menu/"+items._id} onClick={()=>window.scrollTo({top:"0",behavior:'smooth'})} className='md:w-44 w-25 h-25 md:min-w-52 shadow-md p-2 grid gap-1  md:max-w-52 mr-2 ml-2 text-center '>
+      <div className='w-34 mx-auto '>
          <img 
          src={items?.image}
          alt={items?.name}
@@ -33,8 +33,8 @@ function CardProduct({items}) {
       <p className='text-black font-medium text-sm'>{items?.category}</p>
       <p className='line-clamp-2 text-ellipsis font-semibold'>{items?.name}</p>
         <div className='flex items-center gap-3 justify-between'>
-            <p className='text-black font-bold ml-1'>₹{items?.price}</p>
-            <button className='bg-orange-600 text-white px-2 py-1 rounded hover:bg-orange-700 ' onClick={handleAddToCart}>Add To Cart</button>
+            <p className='text-black font-bold '>₹{items?.price}</p>
+            <button className='bg-orange-600 text-white px-2 py-1 rounded hover:bg-orange-700 mr-1 min-w-[100px] ' onClick={handleAddToCart}>Add To Cart</button>
         </div>
    </Link>
   )

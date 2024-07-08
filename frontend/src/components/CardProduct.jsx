@@ -22,7 +22,7 @@ function CardProduct({items}) {
 
   return (
    
-   <Link to={"/menu/"+items._id} onClick={()=>window.scrollTo({top:"0",behavior:'smooth'})} className='md:w-44 w-25 h-25 md:min-w-52 shadow-md p-2 grid gap-1  md:max-w-52 mr-1 ml-1 text-center '>
+   <Link to={"/menu/"+items._id} onClick={()=>window.scrollTo({top:"0",behavior:'smooth'})} className='md:w-44 w-24 h-24 md:min-w-52 shadow-md p-2 grid gap-1  md:max-w-52 mr-1 ml-1 text-center '>
       <div className='w-36 mx-auto '>
          <img 
          src={items?.image}

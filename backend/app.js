@@ -1,11 +1,11 @@
 import express from "express"
 import cors from "cors"
-import cookieparser from "cookie-parser"
+import cookieParser from "cookie-parser"
 
 const app = express()
 
 app.use(express.json({limit : "10666kb"}))
-app.use(cookieparser())
+app.use(cookieParser())
 app.use(express.urlencoded({extended : true}))
 
 
@@ -17,7 +17,7 @@ app.use(cors({
 
 app.get("/",(req,res)=>{
     res.json({
-        messege : "server running on port" + PORT,
+        messege : "server running on port" + process.env.PORT,
         success : true
     })
 })

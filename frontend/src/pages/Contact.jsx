@@ -30,23 +30,23 @@ function Contact() {
     }
   }
   return (
-    <div className="flex items-center mt-3 flex-col gap-3">
+    <div className="flex items-center mt-3 flex-col md:gap-3 gap-2 mr-3 ml-3 mb-4 ">
       <div>
       <p className='m-auto font-bold text-xl'>Contact Us</p>
       </div>
       <div className='w-full bg-slate-400 p-4 max-w-md mx-auto shadow-md rounded-md'>
         <form className='grid gap-3 py-4' onSubmit={handleOnSubmit}>
           <div className='grid gap-1' >
-          <label htmlFor="name" className='font-bold text-md'>Name</label>
-         <input type="text" placeholder='Enter your name' id='name' name='name' className='p-2' required onChange={handleOnChange}/>
+          <label htmlFor="name" className='font-bold text-md '>Name</label>
+         <input type="text" placeholder='Enter your name' id='name' name='name' className='p-2 rounded' required onChange={handleOnChange}/>
          </div>
          <div className='grid gap-1'>
          <label htmlFor="email" className='font-bold text-md'>Email</label>
-         <input type="email" id='email' name='email' placeholder='Enter your email' className='p-2' required onChange={handleOnChange}/>
+         <input type="email" id='email' name='email' placeholder='Enter your email' className='p-2 rounded' required onChange={handleOnChange}/>
          </div>
          <div className='grid gap-1'>
          <label htmlFor="query" className='font-bold text-md'>Query</label>
-           <textarea name="query" id="query" placeholder='Describe your query' required onChange={handleOnChange}></textarea>
+           <textarea name="query" id="query" placeholder='Describe your query' className='p-2 rounded' required onChange={handleOnChange}></textarea>
          </div>
           <button  className='w-full mt-3 p-2 bg-orange-600 text-white font-semibold rounded hover:bg-orange-700'>Submit</button>
          </form>

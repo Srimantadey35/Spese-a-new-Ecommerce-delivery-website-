@@ -32,7 +32,7 @@ function Register() {
      }     
     }
   return (
-    <div className='mt-3'>
+    <div className='m-3'>
         <div className='w-full bg-white p-4 max-w-md mx-auto shadow-md rounded-md'>
             <p>Welcome To Spese</p>
 

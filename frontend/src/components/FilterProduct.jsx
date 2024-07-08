@@ -3,14 +3,14 @@ import categoryList from '../utils/category.js';
 import BiscuitImage from "../asset/Biscuit.jpg"
 import colddrinks from "../asset/colddrinks.jpg"
 import Snacks from "../asset/snacks.jpg"
-import Cake from "../asset/cake.jpg"
+import Cake from "../asset/Cakeand.jpg"
 import { Link } from 'react-router-dom';
 
 
 function FilterProduct({category,onClick}) {
     return(
-      <div onClick={onClick} className='cursor-pointer hover:scale-105 transition-all '>
-         <div className='mt-8 w-28  h-28 shadow-md rounded-sm gap-4'>
+      <div onClick={onClick} className='cursor-pointer hover:scale-105 transition-all ml-1 mr-1'>
+         <div className='mt-8 w-18 md:w-28 h-18 md:h-28 shadow-md gap-1 rounded-sm md:gap-4 '>
                 <div className='w-fit h-fit'>
                 {
                   category.value === "Biscuit & Cookies" &&(
@@ -25,7 +25,8 @@ function FilterProduct({category,onClick}) {
                 {
                   category.value === "Cake & Muffins" &&(
                     <img src={Cake}
-                    className='w-fit h-full '
+                    className='w-full h-full  '
+                   
                     />
                   )
                 }

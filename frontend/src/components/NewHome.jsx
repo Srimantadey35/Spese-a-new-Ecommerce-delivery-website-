@@ -29,7 +29,7 @@ function NewHome({products}) {
             </div>
     
             <div  className='w-full h-full flex items-center justify-center flex-1 lg:pl-4'>
-               <div className='flex flex-wrap gap-5 lg:gap-12 mx-auto max-w-md'>
+               <div className='grid grid-cols-2 md:flex md:flex-wrap md:gap-5 lg:gap-12 mx-auto max-w-md text-center'>
                {
                 products.slice(-4).map((items)=>{
                   return(

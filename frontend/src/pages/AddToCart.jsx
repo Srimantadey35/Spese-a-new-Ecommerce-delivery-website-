@@ -41,8 +41,8 @@ function AddToCart() {
       {cartItem[0] ?
       <div className=''>
         {/* display cart items */}
-        <div className='my-4 flex'>
-           <div className='w-full max-w-3xl'>
+        <div className='my-4 md:flex '>
+           <div className='w-full  md:max-w-4xl mb-4 grid gap-2 '>
             {
               cartItem.map((el)=>{
                 return(

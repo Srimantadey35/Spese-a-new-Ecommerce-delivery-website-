@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Outlet } from 'react-router-dom'
-import Header from './components/Header'
+import Header from './components/Header.jsx'
 import toast, {Toaster} from "react-hot-toast"
 import { useSelector,useDispatch } from 'react-redux'
 import axios from 'axios'
 import { setProducts, setUser } from '../store/userSlice.js'
-import Footer from './pages/Footer.jsx'
+import Footer from "./pages/Footer.jsx";
 
 function App() {
   const accessToken = useSelector((state)=>state.user.accessToken)
@@ -39,17 +39,15 @@ useEffect(()=>{
 
   return (
     <>
-    <main>
-      <Toaster/>
-      <Header/>
-      <div className='pt-16'>
-      <Outlet/>
-      </div>
-      <div className=''>
-      <Footer/>
-      </div>
+     <Toaster/>
+     <Header/>
+     <div className='pt-16'>
+     <Outlet/>
+     </div>
+     <div className='mt-8'>
+     <Footer/>
+     </div>
      
-     </main>
     </>
   )
 }

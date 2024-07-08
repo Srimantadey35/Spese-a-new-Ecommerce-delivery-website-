@@ -32,20 +32,22 @@ function Header() {
    } 
    const cartItemNumber = useSelector(state=>state.user.cartItem)
   return (
-    <header className='fixed h-16 w-full shadow-md bg-white px-4 flex items-center justify-between z-30'>
+    <header className='fixed h-16  px-2 w-full shadow-md bg-white md:px-4 flex items-center justify-between  z-30'>
+      <div>
       <Link to={"/"} >
         <img src={logo} 
         width={50}
           />
       </Link>
+      </div>
       {
-        user.name && (<div className='flex items-center gap-1 text-green-700'>
+        user.name && (<div className='flex items-center gap-1 text-green-700 mr-auto md:ml-auto'>
           <span className='pl-28'><MdOutlineVerified/></span>
           <p className='capitalize max-w-[80px] text-ellipsis line-clamp-1 lg:max-w-[200px] font-semibold'>{user.name}</p>
         </div>)
       }
       
-      <div className='flex items-center gap-6'>
+      <div className='flex items-center md:gap-6 gap-4'>
         <div className='hidden md:flex gap-6 items-center text-lg'>
           <NavLink to={"/"} className={({isActive})=>`${isActive ? "font-semibold text-blue-700":"font-normal text-black"}`}>
            Home
@@ -62,13 +64,14 @@ function Header() {
           <NavLink to={"/contact"} className={({isActive})=>`${isActive ? "font-semibold text-blue-700":"font-normal text-black"}`}>
            Contact
           </NavLink>
-          <NavLink to={"/addtocart"} className={({isActive})=>`${isActive ? "font-semibold text-blue-700":"font-normal text-black"} relative`}>
+          
+        </div>
+        <NavLink to={"/addtocart"} className={({isActive})=>`${isActive ? "font-semibold text-lg text-blue-700":"font-normal text-black"} relative`}>
             <IoCartOutline/>
             <div className='absolute -top-3.5 -right-2 text-white bg-red-500 h-5 w-5 rounded-full m-0 p-0 text-sm text-center'>
                 {cartItemNumber.length}
              </div>
           </NavLink>
-        </div>
         {user.email ? (
         <div className='relative'>
           <div onClick={()=>setOpenmenu((prev)=>!prev)} className='cursor-pointer'>
@@ -91,11 +94,11 @@ function Header() {
         </div>
       )
       :(
-      <Link to={"/login"} className='bg-orange-600 border border-orange-600 text-white px-3 py-1 rounded font-semibold'>
+      <Link to={"/login"} className='bg-orange-600 border border-orange-600 text-white px-3 py-1 rounded font-semibold hover:bg-orange-700'>
         Login
         </Link>
       )}
-      </div>
+    </div>
 
     </header>
     

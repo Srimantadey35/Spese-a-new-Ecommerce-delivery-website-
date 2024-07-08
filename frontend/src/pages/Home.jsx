@@ -6,6 +6,7 @@ import FilterProduct from '../components/FilterProduct.jsx'
 import categoryList from '../utils/category.js'
 import CardProduct from '../components/CardProduct.jsx'
 import { Link } from 'react-router-dom'
+import Footer from './Footer.jsx'
 
 function Home() {
   const products = useSelector(state => state.user.products)
@@ -25,7 +26,7 @@ function Home() {
   }
 
   return(
-    <div>
+    <div className=''>
        <NewHome products = {products}/>
        <BestProducts products = {products}/>
 
@@ -41,7 +42,7 @@ function Home() {
           })
         } 
        </div>
-         <div className='flex flex-wrap justify-center gap-8 py-9'>
+         <div className=' grid grid-cols-2 gap-1 md:flex md:flex-wrap md:justify-center md:gap-8 md:py-9 '>
           {
             datafilter?.map((items)=>{
               
@@ -55,11 +56,11 @@ function Home() {
               
             })
           }
-            
+        
          </div>
          </div>
        
-       
+      
     </div>
   )
   

@@ -23,7 +23,7 @@ function CardProduct({items}) {
   return (
    
    <Link to={"/menu/"+items._id} onClick={()=>window.scrollTo({top:"0",behavior:'smooth'})} className='md:w-44 w-27 h-25 md:min-w-52 shadow-md p-2 grid gap-1  md:max-w-52 mr-1 ml-1 text-center overflow-hidden '>
-      <div className='md:w-36 w-32 mx-auto '>
+      <div className='md:w-36 w-34 mx-auto '>
          <img 
          src={items?.image}
          alt={items?.name}

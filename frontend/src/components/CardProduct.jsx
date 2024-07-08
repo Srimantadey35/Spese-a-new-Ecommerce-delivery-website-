@@ -34,7 +34,7 @@ function CardProduct({items}) {
       <p className='line-clamp-2 text-ellipsis font-semibold'>{items?.name}</p>
         <div className='flex items-center gap-2 md:gap-3 justify-between'>
             <p className='text-black font-bold'>₹{items?.price}</p>
-            <button className='bg-orange-600 text-white px-2 py-1 rounded hover:bg-orange-700' onClick={handleAddToCart}>Add To Cart</button>
+            <button className='bg-orange-600 text-white px-2 py-1 rounded hover:bg-orange-700 max-w-[100px]' onClick={handleAddToCart}>Add To Cart</button>
         </div>
    </Link>
   )

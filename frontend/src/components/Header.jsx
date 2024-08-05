@@ -73,7 +73,7 @@ function Header() {
                 {cartItemNumber.length}
              </div>
           </NavLink>
-        {token ? (
+        {token || user.email ? (
         <div className='relative'>
           <div onClick={()=>setOpenmenu((prev)=>!prev)} className='cursor-pointer'>
             <FaRegUserCircle size={28}/>

@@ -10,6 +10,7 @@ import { MdOutlineVerified } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 
 function Header() {
+  const token = localStorage.getItem("accessToken")
   const {productId} = useParams()
   const user = useSelector((state)=>state.user)
   const [openmenu,setOpenmenu] = useState(false)
@@ -72,7 +73,7 @@ function Header() {
                 {cartItemNumber.length}
              </div>
           </NavLink>
-        {user.email ? (
+        {token ? (
         <div className='relative'>
           <div onClick={()=>setOpenmenu((prev)=>!prev)} className='cursor-pointer'>
             <FaRegUserCircle size={28}/>

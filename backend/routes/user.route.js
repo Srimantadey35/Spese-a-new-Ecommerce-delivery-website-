@@ -17,5 +17,7 @@ router.route("/upload-product").post(verifyJwt,uploadProductDetails)
 router.route("/products").get(getProductDetails)
 router.route("/checkout-payment").post(checkoutPayment)
 router.route("/contact").post(contactDetails)
+router.route("/refreshToken").post(generateRefreshToken)
+
 
 export default router

@@ -11,6 +11,7 @@ import Footer from "./pages/Footer.jsx";
 function App() {
   const navigate = useNavigate()
   const accessToken = useSelector((state)=>state.user.accessToken)
+   const refreshToken = useSelector((state)=>state.user.refreshToken)
   const dispatch = useDispatch()
   const fetchUserDetails = async ()=>{
     const response =  await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/user-details`)
@@ -29,13 +30,10 @@ const fetchProductsDetails = async()=>{
     }
 }
 
-const refreshToken = async()=>{
-  const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/refreshToken`)
-  console.log("response",response)
+const refreshToken1 = async()=>{
+  const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/refreshToken`,refreshToken)
   if(response.data.success){
-    dispatch(setToken({accessToken : response.data.data.accessToken,refreshToken: response.data.data.refreshToken}))
-    localStorage.setItem("accessToken",response.data.data.accessToken)
-    localStorage.setItem("refreshToken",response.data.data.refreshToken)
+    dispatch(setToken({accessToken : response.data.data.accessToken,refreshToken: response.data.messege.refreshToken}))
     navigate("/")
   }
 }
@@ -49,8 +47,8 @@ useEffect(()=>{
 },[])
 
 useEffect(()=>{
-  refreshToken()
-},[])
+  refreshToken1()
+},[accessToken])
 
 
   return (
